@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp"
+    tools:context=".NewAddition">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/rlNewAdditionMain"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent">
+
+            <TextView
+                android:id="@+id/txtName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/new_addition"
+                app:layout_constraintHorizontal_bias="0.355"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:layout_editor_absoluteY="14dp" />
+
+            <EditText
+                android:id="@+id/edtName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txtName"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:padding="10dp"
+                android:background="@drawable/custom_input"/>
+
+            <TextView
+                android:id="@+id/txtGender"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/edtName"
+                android:text="@string/gender"
+                android:layout_marginTop="10dp"/>
+
+            <RadioGroup
+                android:id="@+id/rgGender"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_below="@+id/txtGender">
+
+                <RadioButton
+                    android:id="@+id/rbMale"
+                    android:padding="5dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="@string/male" />
+
+                <RadioButton
+                    android:id="@+id/rbFemale"
+                    android:padding="5dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="@string/female" />
+
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/txtDateOfBirth"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rgGender"
+                android:text="@string/date_of_birth"
+                android:layout_marginTop="10dp"/>
+
+            <EditText
+                android:id="@+id/edtDateOfBirth"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txtDateOfBirth"
+                android:ems="10"
+                android:inputType="date"
+                android:padding="10dp"
+                android:background="@drawable/custom_input"/>
+
+            <TextView
+                android:id="@+id/txtAddress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/edtDateOfBirth"
+                android:text="@string/address"
+                android:layout_marginTop="10dp"/>
+
+            <EditText
+                android:id="@+id/edtAddress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txtAddress"
+                android:ems="10"
+                android:inputType="textPostalAddress"
+                android:padding="10dp"
+                android:background="@drawable/custom_input"/>
+
+            <TextView
+                android:id="@+id/txtPhoneNumber"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/edtAddress"
+                android:text="@string/phone_number"
+                android:layout_marginTop="10dp"/>
+
+            <EditText
+                android:id="@+id/edtPhoneNumber"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txtPhoneNumber"
+                android:ems="10"
+                android:inputType="phone"
+                android:padding="10dp"
+                android:background="@drawable/custom_input"/>
+
+            <TextView
+                android:id="@+id/txtIdNumber"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/edtPhoneNumber"
+                android:text="@string/id_number"
+                android:layout_marginTop="10dp"/>
+
+            <EditText
+                android:id="@+id/edtIdNumber"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txtIdNumber"
+                android:ems="10"
+                android:inputType="phone"
+                android:maxLength="16"
+                android:padding="10dp"
+                android:background="@drawable/custom_input"/>
+
+            <TextView
+                android:id="@+id/txtIdType"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/edtIdNumber"
+                android:text="@string/identity_type"
+                android:layout_marginTop="10dp"/>
+
+            <EditText
+                android:id="@+id/edtIdType"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txtIdType"
+                android:ems="10"
+                android:inputType="phone"
+                android:maxLength="16"
+                android:padding="10dp"
+                android:background="@drawable/custom_input"/>
+
+        </RelativeLayout>
+    </ScrollView>
+
+    <Button
+        android:id="@+id/btnNext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:text="@string/next"
+        android:drawableEnd="@drawable/ic_baseline_chevron_right_24" />
+
+</RelativeLayout>
