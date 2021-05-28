@@ -5,170 +5,137 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="10dp"
-    tools:context=".NewAddition">
+    tools:context=".CaseStudyActivity">
 
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
         <RelativeLayout
-            android:id="@+id/rlNewAdditionMain"
+            android:id="@+id/rlCaseStudyMain"
             android:layout_height="wrap_content"
             android:layout_width="match_parent">
 
             <TextView
-                android:id="@+id/txtName"
+                android:id="@+id/txtUniversity"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/new_addition"
+                android:text="@string/university"
                 app:layout_constraintHorizontal_bias="0.355"
                 app:layout_constraintStart_toStartOf="parent"
                 tools:layout_editor_absoluteY="14dp" />
 
             <EditText
-                android:id="@+id/edtName"
+                android:id="@+id/edtUniversity"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/txtName"
+                android:layout_below="@+id/txtUniversity"
                 android:ems="10"
                 android:inputType="textPersonName"
                 android:padding="10dp"
                 android:background="@drawable/custom_input"/>
 
             <TextView
-                android:id="@+id/txtGender"
+                android:id="@+id/txtCollege"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/edtName"
-                android:text="@string/gender"
-                android:layout_marginTop="10dp"/>
-
-            <RadioGroup
-                android:id="@+id/rgGender"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_below="@+id/txtGender">
-
-                <RadioButton
-                    android:id="@+id/rbMale"
-                    android:padding="5dp"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:text="@string/male" />
-
-                <RadioButton
-                    android:id="@+id/rbFemale"
-                    android:padding="5dp"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:text="@string/female" />
-
-            </RadioGroup>
-
-            <TextView
-                android:id="@+id/txtDateOfBirth"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/rgGender"
-                android:text="@string/date_of_birth"
+                android:layout_below="@+id/edtUniversity"
+                android:text="@string/college"
                 android:layout_marginTop="10dp"/>
 
             <EditText
-                android:id="@+id/edtDateOfBirth"
+                android:id="@+id/edtCollege"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/txtDateOfBirth"
-                android:ems="10"
-                android:inputType="date"
-                android:padding="10dp"
-                android:background="@drawable/custom_input"/>
-
-            <TextView
-                android:id="@+id/txtAddress"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/edtDateOfBirth"
-                android:text="@string/address"
-                android:layout_marginTop="10dp"/>
-
-            <EditText
-                android:id="@+id/edtAddress"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/txtAddress"
-                android:ems="10"
-                android:inputType="textPostalAddress"
-                android:padding="10dp"
-                android:background="@drawable/custom_input"/>
-
-            <TextView
-                android:id="@+id/txtPhoneNumber"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/edtAddress"
-                android:text="@string/phone_number"
-                android:layout_marginTop="10dp"/>
-
-            <EditText
-                android:id="@+id/edtPhoneNumber"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/txtPhoneNumber"
-                android:ems="10"
-                android:inputType="phone"
-                android:padding="10dp"
-                android:background="@drawable/custom_input"/>
-
-            <TextView
-                android:id="@+id/txtIdNumber"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/edtPhoneNumber"
-                android:text="@string/id_number"
-                android:layout_marginTop="10dp"/>
-
-            <EditText
-                android:id="@+id/edtIdNumber"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/txtIdNumber"
-                android:ems="10"
-                android:inputType="phone"
-                android:maxLength="16"
-                android:padding="10dp"
-                android:background="@drawable/custom_input"/>
-
-            <TextView
-                android:id="@+id/txtIdType"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/edtIdNumber"
-                android:text="@string/identity_type"
-                android:layout_marginTop="10dp"/>
-
-            <EditText
-                android:id="@+id/edtIdType"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/txtIdType"
+                android:layout_below="@+id/txtCollege"
                 android:ems="10"
                 android:inputType="text"
-                android:maxLength="16"
+                android:padding="10dp"
+                android:background="@drawable/custom_input"/>
+
+            <TextView
+                android:id="@+id/txtClassroom"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/edtCollege"
+                android:text="@string/class_room"
+                android:layout_marginTop="10dp"/>
+
+            <EditText
+                android:id="@+id/edtClassroom"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txtClassroom"
+                android:ems="10"
+                android:inputType="text"
+                android:padding="10dp"
+                android:background="@drawable/custom_input"/>
+
+            <TextView
+                android:id="@+id/txtSemester"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/edtClassroom"
+                android:text="@string/semester"
+                android:layout_marginTop="10dp"/>
+
+            <EditText
+                android:id="@+id/edtSemester"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txtSemester"
+                android:ems="10"
+                android:inputType="text"
+                android:padding="10dp"
+                android:background="@drawable/custom_input"/>
+
+            <TextView
+                android:id="@+id/txtFees"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/edtSemester"
+                android:text="@string/fees"
+                android:layout_marginTop="10dp"/>
+
+            <EditText
+                android:id="@+id/edtFees"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txtFees"
+                android:ems="10"
+                android:inputType="numberDecimal"
+                android:padding="10dp"
+                android:background="@drawable/custom_input"/>
+
+            <TextView
+                android:id="@+id/txtUniversityId"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/edtFees"
+                android:text="@string/university_id"
+                android:layout_marginTop="10dp"/>
+
+            <EditText
+                android:id="@+id/edtUniversityId"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txtUniversityId"
+                android:ems="10"
+                android:inputType="numberDecimal"
                 android:padding="10dp"
                 android:background="@drawable/custom_input"/>
 
             <Button
-                android:id="@+id/btnNewAdditionNext"
+                android:id="@+id/btnNewAdditionSave"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="10dp"
                 android:layout_marginBottom="10dp"
                 android:layout_alignParentEnd="true"
                 android:layout_alignParentBottom="true"
-                android:layout_below="@id/edtIdType"
-                android:text="@string/next"
-                android:drawableEnd="@drawable/ic_baseline_chevron_right_24" />
+                android:layout_below="@id/edtUniversityId"
+                android:text="@string/save"
+                android:drawableEnd="@drawable/ic_baseline_save_24" />
 
         </RelativeLayout>
     </ScrollView>

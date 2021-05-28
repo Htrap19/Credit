@@ -17,9 +17,22 @@
             </intent-filter>
         </activity>
         <activity android:name=".RegisterActivity" />
-        <activity android:name=".SignInActivity" />
-        <activity android:name=".DashBoardActivity" />
-        <activity android:name=".NewAddition" android:parentActivityName=".DashBoardActivity"/>
+        <activity
+            android:name=".SignInActivity"
+            android:launchMode="singleInstance"/>
+        <activity
+            android:name=".DashBoardActivity"
+            android:launchMode="singleInstance"/>
+        <!-- New addition -->
+        <activity
+            android:name=".NewAddition"
+            android:parentActivityName=".DashBoardActivity"/>
+        <activity
+            android:name=".GuardianActivity"
+            android:parentActivityName=".DashBoardActivity"/>
+        <activity
+            android:name=".CaseStudyActivity"
+            android:parentActivityName=".DashBoardActivity"/>
     </application>
 
 </manifest>

@@ -24,4 +24,24 @@
     <string name="id_number">ID Number</string>
     <string name="identity_type">Identity type</string>
     <string name="next">Next</string>
+    <string name="guardian">Guardian</string>
+    <string name="occupation">Occupation</string>
+    <string name="monthly_income">Monthly Income</string>
+    <string name="adjective">Adjective</string>
+    <string name="father">Father</string>
+    <string name="mother">Mother</string>
+    <string name="brother">Brother</string>
+    <string name="sister">Sister</string>
+    <string name="case_study">Case Study</string>
+    <string name="university">University</string>
+    <string name="college">College</string>
+    <string name="semester">Semester</string>
+    <string name="class_room">Classroom</string>
+    <string name="fees">Fees</string>
+    <string name="save">Save</string>
+    <string name="university_id">University Id</string>
+    <string name="please_complete_the_form">Please complete the form</string>
+    <string name="password_must_be_8">Password must be 8 character long</string>
+    <string name="wrong_access">Wrong username or password</string>
+    <string name="exit_disclaimer">Press exit again to leave the app</string>
 </resources>

@@ -5,82 +5,33 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="10dp"
-    tools:context=".NewAddition">
+    tools:context=".GuardianActivity">
 
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
         <RelativeLayout
-            android:id="@+id/rlNewAdditionMain"
+            android:id="@+id/rlGurdianMain"
             android:layout_height="wrap_content"
             android:layout_width="match_parent">
 
             <TextView
-                android:id="@+id/txtName"
+                android:id="@+id/txtGuardianName"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/new_addition"
+                android:text="@string/guardian"
                 app:layout_constraintHorizontal_bias="0.355"
                 app:layout_constraintStart_toStartOf="parent"
                 tools:layout_editor_absoluteY="14dp" />
 
             <EditText
-                android:id="@+id/edtName"
+                android:id="@+id/edtGuardianName"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/txtName"
+                android:layout_below="@+id/txtGuardianName"
                 android:ems="10"
                 android:inputType="textPersonName"
-                android:padding="10dp"
-                android:background="@drawable/custom_input"/>
-
-            <TextView
-                android:id="@+id/txtGender"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/edtName"
-                android:text="@string/gender"
-                android:layout_marginTop="10dp"/>
-
-            <RadioGroup
-                android:id="@+id/rgGender"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_below="@+id/txtGender">
-
-                <RadioButton
-                    android:id="@+id/rbMale"
-                    android:padding="5dp"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:text="@string/male" />
-
-                <RadioButton
-                    android:id="@+id/rbFemale"
-                    android:padding="5dp"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:text="@string/female" />
-
-            </RadioGroup>
-
-            <TextView
-                android:id="@+id/txtDateOfBirth"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/rgGender"
-                android:text="@string/date_of_birth"
-                android:layout_marginTop="10dp"/>
-
-            <EditText
-                android:id="@+id/edtDateOfBirth"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/txtDateOfBirth"
-                android:ems="10"
-                android:inputType="date"
                 android:padding="10dp"
                 android:background="@drawable/custom_input"/>
 
@@ -88,12 +39,12 @@
                 android:id="@+id/txtAddress"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/edtDateOfBirth"
+                android:layout_below="@+id/edtGuardianName"
                 android:text="@string/address"
                 android:layout_marginTop="10dp"/>
 
             <EditText
-                android:id="@+id/edtAddress"
+                android:id="@+id/edtGuardianAddress"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/txtAddress"
@@ -103,36 +54,72 @@
                 android:background="@drawable/custom_input"/>
 
             <TextView
-                android:id="@+id/txtPhoneNumber"
+                android:id="@+id/txtGuardianPhoneNumber"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/edtAddress"
+                android:layout_below="@+id/edtGuardianAddress"
                 android:text="@string/phone_number"
                 android:layout_marginTop="10dp"/>
 
             <EditText
-                android:id="@+id/edtPhoneNumber"
+                android:id="@+id/edtGuardianPhoneNumber"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/txtPhoneNumber"
+                android:layout_below="@+id/txtGuardianPhoneNumber"
                 android:ems="10"
                 android:inputType="phone"
                 android:padding="10dp"
                 android:background="@drawable/custom_input"/>
 
             <TextView
-                android:id="@+id/txtIdNumber"
+                android:id="@+id/txtOccupation"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/edtPhoneNumber"
+                android:layout_below="@+id/edtGuardianPhoneNumber"
+                android:text="@string/occupation"
+                android:layout_marginTop="10dp"/>
+
+            <EditText
+                android:id="@+id/edtOccupation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txtOccupation"
+                android:ems="10"
+                android:inputType="date"
+                android:padding="10dp"
+                android:background="@drawable/custom_input"/>
+
+            <TextView
+                android:id="@+id/txtMonthlyIncome"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/edtOccupation"
+                android:text="@string/monthly_income"
+                android:layout_marginTop="10dp"/>
+
+            <EditText
+                android:id="@+id/edtMonthlyIncome"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txtMonthlyIncome"
+                android:ems="10"
+                android:inputType="date"
+                android:padding="10dp"
+                android:background="@drawable/custom_input"/>
+
+            <TextView
+                android:id="@+id/txtGuardianIdNumber"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/edtMonthlyIncome"
                 android:text="@string/id_number"
                 android:layout_marginTop="10dp"/>
 
             <EditText
-                android:id="@+id/edtIdNumber"
+                android:id="@+id/edtGuardianIdNumber"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/txtIdNumber"
+                android:layout_below="@+id/txtGuardianIdNumber"
                 android:ems="10"
                 android:inputType="phone"
                 android:maxLength="16"
@@ -140,33 +127,78 @@
                 android:background="@drawable/custom_input"/>
 
             <TextView
-                android:id="@+id/txtIdType"
+                android:id="@+id/txtGuardianIdType"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/edtIdNumber"
+                android:layout_below="@+id/edtGuardianIdNumber"
                 android:text="@string/identity_type"
                 android:layout_marginTop="10dp"/>
 
             <EditText
-                android:id="@+id/edtIdType"
+                android:id="@+id/edtGuardianIdType"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/txtIdType"
+                android:layout_below="@+id/txtGuardianIdType"
                 android:ems="10"
                 android:inputType="text"
                 android:maxLength="16"
                 android:padding="10dp"
                 android:background="@drawable/custom_input"/>
 
+            <TextView
+                android:id="@+id/txtAdjective"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/edtGuardianIdType"
+                android:text="@string/gender"
+                android:layout_marginTop="10dp"/>
+
+            <RadioGroup
+                android:id="@+id/rgAdjective"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_below="@+id/txtAdjective">
+
+                <RadioButton
+                    android:id="@+id/rbFather"
+                    android:padding="5dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="@string/father" />
+
+                <RadioButton
+                    android:id="@+id/rbMother"
+                    android:padding="5dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="@string/mother" />
+
+                <RadioButton
+                    android:id="@+id/rbBrother"
+                    android:padding="5dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="@string/brother" />
+
+                <RadioButton
+                    android:id="@+id/rbSister"
+                    android:padding="5dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="@string/sister" />
+
+            </RadioGroup>
+
             <Button
-                android:id="@+id/btnNewAdditionNext"
+                android:id="@+id/btnGuardianNext"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="10dp"
                 android:layout_marginBottom="10dp"
                 android:layout_alignParentEnd="true"
                 android:layout_alignParentBottom="true"
-                android:layout_below="@id/edtIdType"
+                android:layout_below="@id/rgAdjective"
                 android:text="@string/next"
                 android:drawableEnd="@drawable/ic_baseline_chevron_right_24" />
 

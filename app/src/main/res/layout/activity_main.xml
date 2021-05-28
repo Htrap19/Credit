@@ -9,28 +9,29 @@
 
         <ImageView
             android:id="@+id/imgStartup"
-            android:layout_width="289dp"
+            android:layout_width="match_parent"
             android:layout_height="264dp"
             android:layout_marginBottom="40dp"
             android:contentDescription="@string/get_started"
             app:layout_constraintBottom_toTopOf="@+id/textView"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.526"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.739"
+            app:layout_constraintVertical_bias="0.0"
             app:srcCompat="@drawable/ic_undraw_transfer_money_rywa" />
 
         <TextView
             android:id="@+id/textView"
-            android:layout_width="381dp"
+            android:layout_width="match_parent"
             android:layout_height="50dp"
-            android:layout_marginBottom="244dp"
+            android:layout_marginBottom="300dp"
             android:text="@string/startup_text"
             android:textAlignment="center"
             android:textSize="40sp"
             app:layout_constraintBottom_toTopOf="@+id/btnGetStarted"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.533"
+            app:layout_constraintHorizontal_bias="0.842"
             app:layout_constraintStart_toStartOf="parent" />
 
         <Button

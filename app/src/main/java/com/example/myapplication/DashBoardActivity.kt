@@ -2,6 +2,7 @@ package com.example.myapplication
 
 import android.content.Intent
 import android.os.Bundle
+import android.widget.Toast
 import androidx.appcompat.app.ActionBar
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.GridLayoutManager
@@ -42,7 +43,10 @@ class DashBoardActivity : AppCompatActivity() {
         btnSignOut.setOnClickListener {
             val intent = Intent(this, SignInActivity::class.java)
             startActivity(intent)
-            finish()
         }
+    }
+
+    override fun onBackPressed() {
+        btnSignOut.performClick()
     }
 }
