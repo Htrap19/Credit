@@ -36,7 +36,7 @@
                 android:background="@drawable/custom_input"/>
 
             <TextView
-                android:id="@+id/txtAddress"
+                android:id="@+id/txtGuardianAddress"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/edtGuardianName"
@@ -47,7 +47,7 @@
                 android:id="@+id/edtGuardianAddress"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/txtAddress"
+                android:layout_below="@+id/txtGuardianAddress"
                 android:ems="10"
                 android:inputType="textPostalAddress"
                 android:padding="10dp"
@@ -85,7 +85,7 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/txtOccupation"
                 android:ems="10"
-                android:inputType="date"
+                android:inputType="text"
                 android:padding="10dp"
                 android:background="@drawable/custom_input"/>
 
@@ -103,7 +103,7 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/txtMonthlyIncome"
                 android:ems="10"
-                android:inputType="date"
+                android:inputType="numberDecimal"
                 android:padding="10dp"
                 android:background="@drawable/custom_input"/>
 

@@ -45,4 +45,14 @@
     <string name="password_must_be_8">يجب أن تتكون كلمة المرور من ثمانية أحرف</string>
     <string name="wrong_access">اسم المستخدم أو كلمة المرور خاطئة</string>
     <string name="exit_disclaimer">اضغط على خروج مرة أخرى لمغادرة التطبيق</string>
+    <string name="bank">بنك</string>
+    <string name="bank_type">نوع البنك</string>
+    <string name="account_number">رقم حساب</string>
+    <string name="total_tuition_fees">إجمالي الرسوم الدراسية</string>
+    <string name="payment_period">فترة الدفع</string>
+    <string name="month">شهر</string>
+    <string name="year">السنة</string>
+    <string name="amount_of_repayment">مبلغ السداد</string>
+    <string name="fees_details">تفاصيل الرسوم</string>
+    <string name="search">يبحث</string>
 </resources>

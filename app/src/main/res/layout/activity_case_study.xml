@@ -125,7 +125,7 @@
                 android:padding="10dp"
                 android:background="@drawable/custom_input"/>
 
-            <Button
+            <com.google.android.material.button.MaterialButton
                 android:id="@+id/btnNewAdditionSave"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -135,7 +135,7 @@
                 android:layout_alignParentBottom="true"
                 android:layout_below="@id/edtUniversityId"
                 android:text="@string/save"
-                android:drawableEnd="@drawable/ic_baseline_save_24" />
+                app:icon="@drawable/ic_baseline_save_24"/>
 
         </RelativeLayout>
     </ScrollView>

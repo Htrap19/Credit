@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".BankProcedureActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp">
+
+            <TextView
+                android:id="@+id/txtBank"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentTop="true"
+                android:layout_margin="5dp"
+                android:text="@string/bank" />
+
+            <EditText
+                android:id="@+id/edtBank"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txtBank"
+                android:background="@drawable/custom_input"
+                android:drawablePadding="12dp"
+                android:ems="10"
+                android:padding="10dp" />
+
+            <TextView
+                android:id="@+id/txtType"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/edtBank"
+                android:layout_margin="5dp"
+                android:text="@string/bank_type" />
+
+            <EditText
+                android:id="@+id/edtBankType"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txtType"
+                android:background="@drawable/custom_input"
+                android:drawablePadding="12dp"
+                android:ems="10"
+                android:padding="10dp" />
+
+            <TextView
+                android:id="@+id/txtAccountNumber"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/edtBankType"
+                android:layout_margin="5dp"
+                android:text="@string/account_number" />
+
+            <EditText
+                android:id="@+id/edtAccountNumber"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txtAccountNumber"
+                android:background="@drawable/custom_input"
+                android:drawablePadding="12dp"
+                android:ems="10"
+                android:inputType="number"
+                android:padding="10dp" />
+
+            <TextView
+                android:id="@+id/txtTotalTuitionFees"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/edtAccountNumber"
+                android:layout_margin="5dp"
+                android:text="@string/total_tuition_fees" />
+
+            <EditText
+                android:id="@+id/edtTotalTuitionFees"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txtTotalTuitionFees"
+                android:background="@drawable/custom_input"
+                android:drawablePadding="12dp"
+                android:ems="10"
+                android:inputType="numberDecimal"
+                android:padding="10dp" />
+
+            <TextView
+                android:id="@+id/txtPaymentPeriod"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/edtTotalTuitionFees"
+                android:layout_margin="5dp"
+                android:text="@string/payment_period" />
+
+            <RadioGroup
+                android:id="@+id/rgPaymentPeriodTypes"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_below="@id/txtPaymentPeriod"
+                android:layout_alignParentEnd="true"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/rbMonth"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="@string/month"/>
+
+                <RadioButton
+                    android:id="@+id/rbYear"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="@string/year"/>
+
+            </RadioGroup>
+
+            <EditText
+                android:id="@+id/edtPeriod"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toStartOf="@id/rgPaymentPeriodTypes"
+                android:layout_below="@id/txtPaymentPeriod"
+                android:background="@drawable/custom_input"
+                android:drawablePadding="12dp"
+                android:ems="10"
+                android:inputType="numberDecimal"
+                android:padding="10dp"
+                android:layout_marginEnd="5dp"/>
+
+            <TextView
+                android:id="@+id/txtAmountOfRepayment"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/edtPeriod"
+                android:layout_margin="5dp"
+                android:text="@string/amount_of_repayment" />
+
+            <EditText
+                android:id="@+id/edtAmountOfRepayment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txtAmountOfRepayment"
+                android:background="@drawable/custom_input"
+                android:drawablePadding="12dp"
+                android:ems="10"
+                android:inputType="numberDecimal"
+                android:padding="10dp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnBankProcedureSave"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/edtAmountOfRepayment"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="10dp"
+                android:text="@string/save"
+                app:icon="@drawable/ic_baseline_save_24" />
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

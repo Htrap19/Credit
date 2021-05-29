@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ReportsActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <RelativeLayout
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:padding="10dp">
+
+            <TextView
+                android:id="@+id/txtReportsUniversityId"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentTop="true"
+                android:layout_margin="5dp"
+                android:text="@string/university_id" />
+
+            <EditText
+                android:id="@+id/edtReportsUniversityId"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txtReportsUniversityId"
+                android:background="@drawable/custom_input"
+                android:drawablePadding="12dp"
+                android:ems="10"
+                android:padding="10dp" />
+
+            <TextView
+                android:id="@+id/txtReportsPaymentDetails"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/edtReportsUniversityId"
+                android:layout_margin="5dp"
+                android:text="@string/fees_details" />
+
+            <EditText
+                android:id="@+id/edtReportsPaymentDetails"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txtReportsPaymentDetails"
+                android:background="@drawable/custom_input"
+                android:drawablePadding="12dp"
+                android:ems="10"
+                android:lines="5"
+                android:padding="10dp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnRepaymentSave"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_below="@id/edtReportsPaymentDetails"
+                android:text="@string/search"
+                app:icon="@drawable/ic_baseline_search_24" />
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
