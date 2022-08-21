@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">My Application</string>
+    <string name="app_name">Credit</string>
     <string name="startup_text">Credit</string>
     <string name="get_started">Get Started</string>
     <string name="register_title">Register</string>
@@ -32,7 +32,6 @@
     <string name="mother">Mother</string>
     <string name="brother">Brother</string>
     <string name="sister">Sister</string>
-    <string name="case_study">Case Study</string>
     <string name="university">University</string>
     <string name="college">College</string>
     <string name="semester">Semester</string>
@@ -45,7 +44,7 @@
     <string name="wrong_access">Wrong username or password</string>
     <string name="exit_disclaimer">Press exit again to leave the app</string>
     <string name="bank">Bank</string>
-    <string name="bank_type">Bank Type</string>
+    <string name="bank_type">Branch</string>
     <string name="account_number">Account Number</string>
     <string name="total_tuition_fees">Total tuition fees</string>
     <string name="payment_period">Payment Period</string>
@@ -54,4 +53,42 @@
     <string name="amount_of_repayment">Amount of repayment</string>
     <string name="fees_details">Fees details</string>
     <string name="search">Search</string>
+    <string name="unable_to_register">Unable to register</string>
+    <string name="unable_to_save">Unable to save</string>
+    <string name="student_name">Student Name</string>
+    <string name="guardian_name">Guardian Name</string>
+    <string name="case_study">Student details</string>
+    <string name="empty_field" translatable="false">-- . --</string>
+    <string name="university_id_not_found">University id not found</string>
+    <string name="payment_done">Payment Done</string>
+    <string name="find">Find</string>
+    <string name="student_info">Student Info</string>
+    <string name="student_not_found">Student Not Found</string>
+    <string name="housing">Housing</string>
+    <string name="new_registration">New Registration</string>
+    <string name="accommodation_details">Accommodation Details</string>
+    <string name="interior">Interior</string>
+    <string name="room_number">Room Number</string>
+    <string name="wing">Wing</string>
+    <string name="please_select_a_valid_university_id">Please select a valid university id</string>
+    <string name="bedroom_number">Bedroom Number</string>
+    <string name="cupboard_number">Cupboard Number</string>
+    <string name="housing_fee">Housing Fee</string>
+    <string name="residential_fees">Residential Fees</string>
+    <string name="permissions">Permissions</string>
+    <string name="warranty">Warranty</string>
+    <string name="accommodation_fees">Accommodation Fees</string>
+    <string name="amount">Amount</string>
+    <string name="receipt_number">Receipt Number</string>
+    <string name="year_history">Year History</string>
+    <string name="return_date">Return Date</string>
+    <string name="number_of_days">Number Of Days</string>
+    <string name="visiting_to_name">Visiting To Name</string>
+    <string name="visiting_to_address">Visiting To Address</string>
+    <string name="visiting_to_phone_number">Visiting To Phone Number</string>
+    <string name="number_of_family_escapes">Number of family escapes</string>
+    <string name="number_of_brothers_in_university">Number of brothers in university</string>
+    <string name="is_father_alive">Is father alive</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
 </resources>

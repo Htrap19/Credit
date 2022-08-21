@@ -22,8 +22,7 @@
             android:launchMode="singleInstance" />
         <activity
             android:name=".DashBoardActivity"
-            android:launchMode="singleInstance" />
-        <!-- New addition -->
+            android:launchMode="singleInstance" /> <!-- New addition -->
         <activity
             android:name=".NewAddition"
             android:parentActivityName=".DashBoardActivity" />
@@ -31,24 +30,41 @@
             android:name=".GuardianActivity"
             android:parentActivityName=".DashBoardActivity" />
         <activity
+            android:name=".HousingActivity"
+            android:parentActivityName=".DashBoardActivity" /> <!-- Housing -->
+        <activity
+            android:name=".HousingRegistrationActivity"
+            android:parentActivityName=".HousingActivity" />
+        <activity
+            android:name=".HousingFeeActivity"
+            android:parentActivityName=".HousingActivity" />
+        <activity
+            android:name=".PermissionsActivity"
+            android:parentActivityName=".HousingActivity" />
+        <activity
+            android:name=".WarrentyActivity"
+            android:parentActivityName=".HousingActivity" />
+        <activity
+            android:name=".HousingReportsActivity"
+            android:parentActivityName=".HousingActivity" />
+        <activity
             android:name=".CaseStudyActivity"
-            android:parentActivityName=".DashBoardActivity" />
-        <!-- Bank Procedure -->
+            android:parentActivityName=".DashBoardActivity" /> <!-- Bank Procedure -->
         <activity
             android:name=".BankProcedureActivity"
-            android:parentActivityName=".DashBoardActivity" />
-        <!-- Repayments -->
+            android:parentActivityName=".DashBoardActivity" /> <!-- Repayments -->
         <activity
             android:name=".RepaymentsActivity"
-            android:parentActivityName=".DashBoardActivity" />
-        <!-- Reports -->
+            android:parentActivityName=".DashBoardActivity" /> <!-- Reports -->
         <activity
             android:name=".ReportsActivity"
-            android:parentActivityName=".DashBoardActivity" />
-        <!-- Student Records -->
+            android:parentActivityName=".DashBoardActivity" /> <!-- Student Records -->
         <activity
             android:name=".StudentRecordActivity"
-            android:parentActivityName=".DashBoardActivity"/>
+            android:parentActivityName=".DashBoardActivity" />
+        <activity
+            android:name=".ResearchActivity"
+            android:parentActivityName=".DashBoardActivity" />
     </application>
 
 </manifest>

@@ -12,7 +12,6 @@ import kotlin.system.exitProcess
 class SignInActivity : AppCompatActivity()
 {
     private val userTbl = UserTbl()
-    private val db = DatabaseHelper(this, userTbl)
     private var exit: Boolean = false
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -24,7 +23,9 @@ class SignInActivity : AppCompatActivity()
 
         btnSignIn.setOnClickListener {
             if (edtUsername.text.isNotEmpty() && edtUsername.text.isNotEmpty()) {
+                val db = DatabaseHelper(this, userTbl)
                 val user = db.readData()[0]
+                db.close()
                 val userName = edtUsername.text.toString()
                 val passWord = edtPassword.text.toString()
                 if (user.username == userName && user.password == passWord) {

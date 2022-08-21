@@ -23,6 +23,9 @@ class DashBoardActivity : AppCompatActivity() {
         cardViews.add(Model(R.drawable.ic_baseline_add_circle_24, getString(R.string.new_addition)) {
             return@Model Intent(this, NewAddition::class.java)
         })
+        cardViews.add(Model(R.drawable.ic_baseline_house_24, getString(R.string.housing)) {
+            return@Model Intent(this, HousingActivity::class.java)
+        })
         cardViews.add(Model(R.drawable.ic_baseline_credit_card_24, getString(R.string.bank_procedure)) {
             return@Model Intent(this, BankProcedureActivity::class.java)
         })
@@ -34,6 +37,9 @@ class DashBoardActivity : AppCompatActivity() {
         })
         cardViews.add(Model(R.drawable.ic_baseline_timeline_24, getString(R.string.student_record)) {
             return@Model Intent(this, StudentRecordActivity::class.java)
+        })
+        cardViews.add(Model(R.drawable.ic_baseline_person_search_24, getString(R.string.find)) {
+            return@Model Intent(this, ResearchActivity::class.java)
         })
 
         val dashboardAdapter = DashboardAdapter(cardViews, this)

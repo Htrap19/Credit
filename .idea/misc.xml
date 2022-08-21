@@ -1,5 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/User/.gradle/caches/transforms-2/files-2.1/88f5e1777c88474c32d796e7eba3a382/appcompat-1.2.0/res/layout/support_simple_spinner_dropdown_item.xml" value="0.22826086956521738" />
+        <entry key="..\:/Users/User/StudioProjects/Credit/app/src/main/res/drawable/custom_account_icon.xml" value="0.2265" />
+        <entry key="..\:/Users/User/StudioProjects/Credit/app/src/main/res/drawable/ic_baseline_add_circle_24.xml" value="0.2265" />
+        <entry key="..\:/Users/User/StudioProjects/Credit/app/src/main/res/drawable/ic_baseline_article_24.xml" value="0.2265" />
+        <entry key="..\:/Users/User/StudioProjects/Credit/app/src/main/res/drawable/ic_baseline_house_24.xml" value="0.2265" />
+        <entry key="..\:/Users/User/StudioProjects/Credit/app/src/main/res/drawable/ic_baseline_monetization_on_24.xml" value="0.2265" />
+        <entry key="..\:/Users/User/StudioProjects/Credit/app/src/main/res/drawable/ic_baseline_person_search_24.xml" value="0.2265" />
+        <entry key="..\:/Users/User/StudioProjects/Credit/app/src/main/res/drawable/ic_baseline_rule_24.xml" value="0.2265" />
+        <entry key="..\:/Users/User/StudioProjects/Credit/app/src/main/res/layout/action_bar_layout.xml" value="0.22826086956521738" />
+        <entry key="..\:/Users/User/StudioProjects/Credit/app/src/main/res/layout/activity_dashboard.xml" value="0.22826086956521738" />
+        <entry key="..\:/Users/User/StudioProjects/Credit/app/src/main/res/layout/activity_guardian.xml" value="0.22826086956521738" />
+        <entry key="..\:/Users/User/StudioProjects/Credit/app/src/main/res/layout/activity_housing.xml" value="0.22826086956521738" />
+        <entry key="..\:/Users/User/StudioProjects/Credit/app/src/main/res/layout/activity_housing_fee.xml" value="0.22826086956521738" />
+        <entry key="..\:/Users/User/StudioProjects/Credit/app/src/main/res/layout/activity_housing_registation.xml" value="0.22826086956521738" />
+        <entry key="..\:/Users/User/StudioProjects/Credit/app/src/main/res/layout/activity_housing_reports.xml" value="0.22826086956521738" />
+        <entry key="..\:/Users/User/StudioProjects/Credit/app/src/main/res/layout/activity_new_addition.xml" value="0.22826086956521738" />
+        <entry key="..\:/Users/User/StudioProjects/Credit/app/src/main/res/layout/activity_permissions.xml" value="0.22826086956521738" />
+        <entry key="..\:/Users/User/StudioProjects/Credit/app/src/main/res/layout/activity_reports.xml" value="0.1" />
+        <entry key="..\:/Users/User/StudioProjects/Credit/app/src/main/res/layout/activity_research.xml" value="0.22826086956521738" />
+        <entry key="..\:/Users/User/StudioProjects/Credit/app/src/main/res/layout/activity_student_record.xml" value="0.22826086956521738" />
+        <entry key="..\:/Users/User/StudioProjects/Credit/app/src/main/res/layout/activity_warrenty.xml" value="0.22826086956521738" />
+        <entry key="..\:/Users/User/StudioProjects/Credit/app/src/main/res/layout/dashboard_cardview.xml" value="0.22826086956521738" />
+        <entry key="..\:/Users/User/StudioProjects/Credit/app/src/main/res/layout/student_record_row.xml" value="0.22826086956521738" />
+      </map>
+    </option>
+  </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="11" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>

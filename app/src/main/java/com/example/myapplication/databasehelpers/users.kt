@@ -54,4 +54,8 @@ class UserTbl : Table<User> {
         }
         return list
     }
+
+    override fun deletionQuery(): String {
+        return "DROP TABLE IF EXISTS $tableName"
+    }
 }

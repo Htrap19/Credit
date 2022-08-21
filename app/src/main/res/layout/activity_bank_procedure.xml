@@ -20,10 +20,30 @@
             android:padding="10dp">
 
             <TextView
-                android:id="@+id/txtBank"
+                android:id="@+id/txtStudentName"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_alignParentTop="true"
+                android:layout_margin="5dp"
+                android:text="@string/name" />
+
+            <AutoCompleteTextView
+                android:id="@+id/edtStudentName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txtStudentName"
+                android:background="@drawable/custom_input"
+                android:drawablePadding="12dp"
+                android:ems="10"
+                android:padding="10dp"
+                android:singleLine="true"
+                android:labelFor="@id/txtStudentName"/>
+
+            <TextView
+                android:id="@+id/txtBank"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/edtStudentName"
                 android:layout_margin="5dp"
                 android:text="@string/bank" />
 
@@ -35,10 +55,11 @@
                 android:background="@drawable/custom_input"
                 android:drawablePadding="12dp"
                 android:ems="10"
+                android:singleLine="true"
                 android:padding="10dp" />
 
             <TextView
-                android:id="@+id/txtType"
+                android:id="@+id/txtBankType"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_below="@id/edtBank"
@@ -49,10 +70,11 @@
                 android:id="@+id/edtBankType"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/txtType"
+                android:layout_below="@+id/txtBankType"
                 android:background="@drawable/custom_input"
                 android:drawablePadding="12dp"
                 android:ems="10"
+                android:singleLine="true"
                 android:padding="10dp" />
 
             <TextView
@@ -71,6 +93,7 @@
                 android:background="@drawable/custom_input"
                 android:drawablePadding="12dp"
                 android:ems="10"
+                android:singleLine="true"
                 android:inputType="number"
                 android:padding="10dp" />
 
@@ -90,6 +113,7 @@
                 android:background="@drawable/custom_input"
                 android:drawablePadding="12dp"
                 android:ems="10"
+                android:singleLine="true"
                 android:inputType="numberDecimal"
                 android:padding="10dp" />
 
@@ -132,6 +156,7 @@
                 android:background="@drawable/custom_input"
                 android:drawablePadding="12dp"
                 android:ems="10"
+                android:singleLine="true"
                 android:inputType="numberDecimal"
                 android:padding="10dp"
                 android:layout_marginEnd="5dp"/>
@@ -152,6 +177,7 @@
                 android:background="@drawable/custom_input"
                 android:drawablePadding="12dp"
                 android:ems="10"
+                android:singleLine="true"
                 android:inputType="numberDecimal"
                 android:padding="10dp" />
 

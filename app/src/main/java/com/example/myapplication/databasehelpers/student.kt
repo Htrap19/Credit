@@ -14,7 +14,12 @@ class Student : Serializable {
     var idNumber: String = ""
     var idType: String = ""
 
-    constructor(name: String, gender: Int, dateOfBirth: String, phoneNumber: Int, address: String, idNumber: String, idType: String) {
+    constructor(name: String, gender: Int,
+                dateOfBirth: String,
+                phoneNumber: Int,
+                address: String,
+                idNumber: String,
+                idType: String) {
         this.name = name
         this.gender = gender
         this.dateOfBirth = dateOfBirth
@@ -31,10 +36,10 @@ class Student : Serializable {
         const val COL_ID = "id"
         const val COL_NAME = "name"
         const val COL_GENDER = "gender"
-        const val COL_DATEOFBIRTH = "date_of_birth"
-        const val COL_PHONENUMBER = "phone_number"
+        const val COL_DATE_OF_BIRTH = "date_of_birth"
+        const val COL_PHONE_NUMBER = "phone_number"
         const val COL_ADDRESS = "address"
-        const val COL_IDNUMBER = "id_number"
+        const val COL_ID_NUMBER = "id_number"
         const val COL_ID_TYPE = "id_type"
     }
 }
@@ -43,25 +48,25 @@ class StudentTbl : Table<Student> {
     override val tableName: String = "students"
 
     override fun creationQuery(): String {
-        return "CREATE TABLE $tableName (" +
-                "${Student.COL_ID           } INTEGER PRIMARY KEY AUTOINCREMENT," +
-                "${Student.COL_NAME         } VARCHAR(256)," +
-                "${Student.COL_GENDER       } INTEGER," +
-                "${Student.COL_DATEOFBIRTH  } VARCHAR(256)," +
-                "${Student.COL_PHONENUMBER  } INTEGER," +
-                "${Student.COL_ADDRESS      } VARCHAR(256)," +
-                "${Student.COL_IDNUMBER     } VARCHAR(256)," +
-                "${Student.COL_ID_TYPE      } VARCHAR(256))"
+        return "CREATE TABLE IF NOT EXISTS $tableName (" +
+                "${Student.COL_ID} INTEGER PRIMARY KEY AUTOINCREMENT," +
+                "${Student.COL_NAME} TEXT," +
+                "${Student.COL_GENDER} INTEGER," +
+                "${Student.COL_DATE_OF_BIRTH} TEXT," +
+                "${Student.COL_PHONE_NUMBER} INTEGER," +
+                "${Student.COL_ADDRESS} TEXT," +
+                "${Student.COL_ID_NUMBER} TEXT," +
+                "${Student.COL_ID_TYPE} TEXT);"
     }
 
     override fun contentValues(data: Student): ContentValues {
         val cv = ContentValues()
         cv.put(Student.COL_NAME, data.name)
         cv.put(Student.COL_GENDER, data.gender)
-        cv.put(Student.COL_DATEOFBIRTH, data.dateOfBirth)
-        cv.put(Student.COL_PHONENUMBER, data.phoneNumber)
+        cv.put(Student.COL_DATE_OF_BIRTH, data.dateOfBirth)
+        cv.put(Student.COL_PHONE_NUMBER, data.phoneNumber)
         cv.put(Student.COL_ADDRESS, data.address)
-        cv.put(Student.COL_IDNUMBER, data.idNumber)
+        cv.put(Student.COL_ID_NUMBER, data.idNumber)
         cv.put(Student.COL_ID_TYPE, data.idType)
         return cv
     }
@@ -75,16 +80,20 @@ class StudentTbl : Table<Student> {
                     student.id = cursor.getInt(cursor.getColumnIndex(Student.COL_ID))
                     student.name = cursor.getString(cursor.getColumnIndex(Student.COL_NAME))
                     student.gender = cursor.getInt(cursor.getColumnIndex(Student.COL_GENDER))
-                    student.dateOfBirth = cursor.getString(cursor.getColumnIndex(Student.COL_DATEOFBIRTH))
-                    student.phoneNumber = cursor.getInt(cursor.getColumnIndex(Student.COL_PHONENUMBER))
+                    student.dateOfBirth = cursor.getString(cursor.getColumnIndex(Student.COL_DATE_OF_BIRTH))
+                    student.phoneNumber = cursor.getInt(cursor.getColumnIndex(Student.COL_PHONE_NUMBER))
                     student.address = cursor.getString(cursor.getColumnIndex(Student.COL_ADDRESS))
-                    student.idNumber = cursor.getString(cursor.getColumnIndex(Student.COL_IDNUMBER))
+                    student.idNumber = cursor.getString(cursor.getColumnIndex(Student.COL_ID_NUMBER))
                     student.idType = cursor.getString(cursor.getColumnIndex(Student.COL_ID_TYPE))
                     list.add(student)
                 } while (cursor.moveToNext())
             }
         }
         return list
+    }
+
+    override fun deletionQuery(): String {
+        return "DROP TABLE IF EXISTS $tableName"
     }
 
 }

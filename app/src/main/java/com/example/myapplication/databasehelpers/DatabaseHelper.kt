@@ -5,26 +5,45 @@ import android.content.Context
 import android.database.Cursor
 import android.database.sqlite.SQLiteDatabase
 import android.database.sqlite.SQLiteOpenHelper
+import android.util.Log
 
 const val DATABASE_NAME = "CreditDB"
 
 interface Table<T> {
     val tableName: String
     fun creationQuery(): String
+    fun deletionQuery(): String
     fun contentValues(data: T): ContentValues
     fun mutableList(cursor: Cursor?): MutableList<T>
 }
 
 class DatabaseHelper<T>(val context: Context, val table: Table<T>) : SQLiteOpenHelper(context, DATABASE_NAME, null, 1) {
+    companion object {
+        private var initialized = false
+    }
+
     override fun onCreate(db: SQLiteDatabase?) {
-        db?.execSQL(table.creationQuery())
+        if (!initialized) {
+            db?.execSQL(UserTbl().creationQuery())
+            db?.execSQL(StudentTbl().creationQuery())
+            db?.execSQL(GuardianTbl().creationQuery())
+            db?.execSQL(CaseStudyTbl().creationQuery())
+            db?.execSQL(BankProcedureTbl().creationQuery())
+            db?.execSQL(RepaymentsTbl().creationQuery())
+            db?.execSQL(AccommodationTbl().creationQuery())
+            db?.execSQL(AccommodationFeesTbl().creationQuery())
+            db?.execSQL(PermissionsTbl().creationQuery())
+            db?.execSQL(WarrentyTbl().creationQuery())
+            initialized = true
+        }
     }
 
     override fun onUpgrade(db: SQLiteDatabase?, oldVersion: Int, newVersion: Int) {
-        TODO("Not yet implemented")
+        db?.execSQL(table.deletionQuery())
+        this.onCreate(db)
     }
 
-    fun selectAllQuery(): String {
+    private fun selectAllQuery(): String {
         return "SELECT * FROM " + table.tableName
     }
 
@@ -35,12 +54,24 @@ class DatabaseHelper<T>(val context: Context, val table: Table<T>) : SQLiteOpenH
         return (result != (-1).toLong())
     }
 
-    fun readData(): MutableList<T> {
+    private fun readDataRow(query: String): Pair<SQLiteDatabase, Cursor> {
         val db = this.readableDatabase
-        val result = db.rawQuery(this.selectAllQuery(), null)
-        val list: MutableList<T> = table.mutableList(result)
-        result.close()
-        db.close()
+        return Pair(db, db.rawQuery(query, null))
+    }
+
+    fun readData(): MutableList<T> {
+        val result = readDataRow(this.selectAllQuery())
+        val list: MutableList<T> = table.mutableList(result.second)
+        result.second.close()
+        result.first.close()
+        return list
+    }
+
+    fun readData(whereClause: String): MutableList<T> {
+        val result = readDataRow(this.selectAllQuery() + " WHERE " + whereClause)
+        val list: MutableList<T> = table.mutableList(result.second)
+        result.second.close()
+        result.first.close()
         return list
     }
 

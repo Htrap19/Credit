@@ -13,7 +13,6 @@ import kotlinx.android.synthetic.main.activity_register.*
 class RegisterActivity : AppCompatActivity()
 {
     private val usersTbl = UserTbl()
-    private val db = DatabaseHelper<User>(this, usersTbl)
 
     override fun onCreate(savedInstanceState: Bundle?)
     {
@@ -23,22 +22,30 @@ class RegisterActivity : AppCompatActivity()
         title = getString(R.string.app_name) + " - " + getString(R.string.register_title)
 
         btnRegister.setOnClickListener {
-            if ((edtUsername.text.isNotEmpty() && edtPassword.text.isNotEmpty())) {
-                if (edtPassword.text.length < 8)
-                    Toast.makeText(this, getString(R.string.password_must_be_8), Toast.LENGTH_SHORT).show()
-                else {
-                    val user = User(edtUsername.text.toString(), edtPassword.text.toString())
-                    if (db.insertData(user)) {
-                        val intent = Intent(this, SignInActivity::class.java)
-                        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
-                        startActivity(intent)
-                        finish()
-                    } else {
-                        Log.i("RegisterActivity", "Unable to register!")
+            try {
+                if ((edtUsername.text.isNotEmpty() && edtPassword.text.isNotEmpty())) {
+                    if (edtPassword.text.length < 8)
+                        showToastShort(getString(R.string.password_must_be_8))
+                    else {
+                        val user = User(edtUsername.text.toString(), edtPassword.text.toString())
+
+                        val db = DatabaseHelper(this, usersTbl)
+                        if (db.insertData(user)) {
+                            db.close()
+                            val intent = Intent(this, SignInActivity::class.java)
+                            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
+                            startActivity(intent)
+                            finish()
+                        } else {
+                            showToastShort(getString(R.string.unable_to_register))
+                        }
                     }
-                }
-            } else
-                Toast.makeText(this, getString(R.string.please_complete_the_form), Toast.LENGTH_SHORT).show()
+                } else
+                    showToastShort(getString(R.string.please_complete_the_form))
+            } catch (e: Exception) {
+                showToastShort(e.message.toString())
+            }
+
         }
     }
 }

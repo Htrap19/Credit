@@ -27,7 +27,7 @@
                 android:layout_margin="5dp"
                 android:text="@string/university_id" />
 
-            <EditText
+            <AutoCompleteTextView
                 android:id="@+id/edtRepaymentUniversityId"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -35,6 +35,8 @@
                 android:background="@drawable/custom_input"
                 android:drawablePadding="12dp"
                 android:ems="10"
+                android:singleLine="true"
+                android:inputType="number"
                 android:padding="10dp" />
 
             <TextView
@@ -45,15 +47,16 @@
                 android:layout_margin="5dp"
                 android:text="@string/fees_details" />
 
-            <EditText
+            <TextView
                 android:id="@+id/edtFeesDetails"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/txtFeesDetails"
-                android:background="@drawable/custom_input"
-                android:drawablePadding="12dp"
                 android:ems="10"
-                android:lines="5"
+                android:singleLine="true"
+                android:text="@string/empty_field"
+                android:textSize="20sp"
+                android:textAlignment="center"
                 android:padding="10dp" />
 
             <TextView
@@ -72,6 +75,8 @@
                 android:background="@drawable/custom_input"
                 android:drawablePadding="12dp"
                 android:ems="10"
+                android:singleLine="true"
+                android:inputType="numberDecimal"
                 android:padding="10dp" />
 
             <com.google.android.material.button.MaterialButton

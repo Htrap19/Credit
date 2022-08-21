@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp"
+    tools:context=".PermissionsActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/txtUniversityId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginBottom="5dp"
+            android:text="@string/university_id" />
+
+        <AutoCompleteTextView
+            android:id="@+id/edtUniversityId"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txtUniversityId"
+            android:padding="10dp"
+            android:background="@drawable/border"
+            android:singleLine="true"
+            android:layout_marginBottom="10dp"/>
+
+        <TextView
+            android:id="@+id/txtStudentInfo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/edtUniversityId"
+            android:text="@string/student_info"
+            android:textSize="20sp"
+            android:layout_centerHorizontal="true"
+            android:textStyle="bold"
+            android:textColor="?attr/colorPrimary"/>
+
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/nsvStudentInfo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txtStudentInfo">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="5dp"
+                app:cardElevation="8dp"
+                app:cardMaxElevation="12dp"
+                app:cardPreventCornerOverlap="true"
+                app:cardUseCompatPadding="true">
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:weightSum="2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:baselineAligned="false">
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="5dp"
+                            android:text="@string/student_name"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="5dp"
+                            android:text="@string/phone_number"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="5dp"
+                            android:text="@string/university"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="5dp"
+                            android:text="@string/college"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_weight="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/tvStudentName"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="5dp" />
+
+                        <TextView
+                            android:id="@+id/tvStudentPhoneNumber"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="5dp" />
+
+                        <TextView
+                            android:id="@+id/tvUniversity"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="5dp" />
+
+                        <TextView
+                            android:id="@+id/tvCollege"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="5dp" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+        </androidx.core.widget.NestedScrollView>
+
+        <TextView
+            android:id="@+id/txtYearHistory"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/nsvStudentInfo"
+            android:layout_marginBottom="5dp"
+            android:text="@string/year_history" />
+
+        <EditText
+            android:id="@+id/edtYearHistory"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txtYearHistory"
+            android:padding="10dp"
+            android:background="@drawable/border"
+            android:singleLine="true"
+            android:layout_marginBottom="10dp" />
+
+        <TextView
+            android:id="@+id/txtReturnDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/edtYearHistory"
+            android:layout_marginBottom="5dp"
+            android:text="@string/return_date" />
+
+        <EditText
+            android:id="@+id/edtReturnDate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txtReturnDate"
+            android:padding="10dp"
+            android:inputType="date"
+            android:background="@drawable/border"
+            android:singleLine="true"
+            android:layout_marginBottom="10dp" />
+
+        <TextView
+            android:id="@+id/txtNumberOfDays"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/edtReturnDate"
+            android:layout_marginBottom="5dp"
+            android:text="@string/number_of_days" />
+
+
+        <EditText
+            android:id="@+id/edtNumberOfDays"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txtNumberOfDays"
+            android:padding="10dp"
+            android:inputType="number"
+            android:background="@drawable/border"
+            android:singleLine="true"
+            android:layout_marginBottom="10dp" />
+
+        <TextView
+            android:id="@+id/txtVisitingToName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/edtNumberOfDays"
+            android:layout_marginBottom="5dp"
+            android:text="@string/visiting_to_name" />
+
+        <EditText
+            android:id="@+id/edtVisitingToName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txtVisitingToName"
+            android:padding="10dp"
+            android:background="@drawable/border"
+            android:singleLine="true"
+            android:layout_marginBottom="10dp" />
+
+        <TextView
+            android:id="@+id/txtVisitingToAddress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/edtVisitingToName"
+            android:layout_marginBottom="5dp"
+            android:text="@string/visiting_to_address" />
+
+        <EditText
+            android:id="@+id/edtVisitingToAddress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txtVisitingToAddress"
+            android:padding="10dp"
+            android:background="@drawable/border"
+            android:singleLine="true"
+            android:layout_marginBottom="10dp" />
+
+        <TextView
+            android:id="@+id/txtVisitingToPhoneNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/edtVisitingToAddress"
+            android:layout_marginBottom="5dp"
+            android:text="@string/visiting_to_phone_number" />
+
+        <EditText
+            android:id="@+id/edtVisitingToPhoneNumber"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txtVisitingToPhoneNumber"
+            android:padding="10dp"
+            android:inputType="phone"
+            android:maxLength="10"
+            android:background="@drawable/border"
+            android:singleLine="true"
+            android:layout_marginBottom="10dp" />
+
+        <Button
+            android:id="@+id/btnSavePermissions"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/save"
+            android:layout_below="@id/edtVisitingToPhoneNumber"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:drawableEnd="@drawable/ic_baseline_save_24"/>
+
+    </RelativeLayout>
+
+</ScrollView>
